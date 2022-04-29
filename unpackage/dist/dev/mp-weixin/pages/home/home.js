@@ -148,12 +148,27 @@ var render = function() {
     }
   })
 
+  var l2 = _vm.__map(_vm.FlooerList, function(item, i) {
+    var $orig = _vm.__get_orig(item)
+
+    var f2 = _vm._f("changeHttp")(item.floor_title.image_src)
+
+    var f3 = _vm._f("changeHttp")(item.product_list[0].image_src)
+
+    return {
+      $orig: $orig,
+      f2: f2,
+      f3: f3
+    }
+  })
+
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         l0: l0,
-        l1: l1
+        l1: l1,
+        l2: l2
       }
     }
   )
@@ -191,6 +206,24 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -244,7 +277,8 @@ var _default =
                 if (res.meta.status !== 200) {
                   uni.$toastMsg('数据加载失败。。。');
                 }
-                _this2.NavList = res.message;case 6:case "end":return _context2.stop();}}}, _callee2);}))();
+                _this2.NavList = res.message;
+                console.log(_this2.NavList);case 7:case "end":return _context2.stop();}}}, _callee2);}))();
     },
     getFlooer: function getFlooer() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _yield$uni$$http$get3, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
 
@@ -253,7 +287,15 @@ var _default =
                 if (res.meta.status !== 200) {
                   uni.$toastMsg('数据加载失败。。。');
                 }
-                _this3.FlooerList = res.message;case 6:case "end":return _context3.stop();}}}, _callee3);}))();
+                _this3.FlooerList = res.message;
+                console.log('楼层数据=>', _this3.FlooerList);case 7:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
+    listTypehander: function listTypehander(item) {
+      if (item.name === '分类') {
+        uni.switchTab({
+          url: '/pages/cate/cate' });
+
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

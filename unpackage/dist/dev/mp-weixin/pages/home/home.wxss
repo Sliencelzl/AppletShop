@@ -30,4 +30,20 @@
   width: 140rpx;
   height: 140rpx;
 }
+.home_page .floor-title {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+}
+.home_page .rigth-img-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10rpx;
+}
+.home_page .rigth-img-box .floorImgitems {
+  padding-left: 10rpx;
+}
+.home_page .floor-img-box {
+  display: flex;
+}
 
