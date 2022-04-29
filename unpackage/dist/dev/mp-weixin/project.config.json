@@ -30,13 +30,31 @@
             "outputPath": ""
         },
         "disableUseStrict": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
     "compileType": "miniprogram",
     "libVersion": "2.24.1",
     "appid": "wx0a506cc8d510d88c",
     "projectname": "易购",
-    "condition": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "current": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
