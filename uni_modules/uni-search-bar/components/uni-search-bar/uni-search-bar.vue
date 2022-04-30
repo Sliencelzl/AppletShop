@@ -1,4 +1,4 @@
-s<template>
+<template>
 	<view class="uni-searchbar">
 		<view :style="{borderRadius:radius+'px',backgroundColor: bgColor}" class="uni-searchbar__box" @click="searchClick">
 			<view class="uni-searchbar__box-icon-search">
@@ -58,7 +58,7 @@ s<template>
 		props: {
 			placeholder: {
 				type: String,
-				default: ""
+				default: "请输入搜索内容"
 			},
 			radius: {
 				type: [Number, String],
@@ -99,8 +99,8 @@ s<template>
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				show: true,
+				showSync: true,
 				searchVal: ''
 			}
 		},
@@ -224,6 +224,7 @@ s<template>
 		flex-direction: row;
 		position: relative;
 		padding: 10px;
+		background-color: #c00000;
 		// background-color: #fff;
 	}
 

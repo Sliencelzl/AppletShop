@@ -1,5 +1,8 @@
 <template>
 	<view class="home_page">
+		<view class="search-box">
+			<my-search @click="gotoSearch"></my-search>
+		</view>
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item class="swiper_item" v-for="(item,i) in SwiperLise" :key="i">
 				<navigator class="img" :url="'/subpkg/good_detail/good_detail?goods_id='+item.goods_id">
@@ -22,7 +25,7 @@
 					</view>
 					<view class="rigth-img-box">
 						<view class="right-img-item" v-for="(item2,i2) in item.product_list" :key="i2" v-if="i2 !== 0">
-							<image :src="item2.image_src" :style="{width:item2.image_width + 'rpx'}" mode="widthFix" class="floorImgitems"></image>
+							<image :src="item2.image_src | changeHttp" :style="{width:item2.image_width + 'rpx'}" mode="widthFix" class="floorImgitems"></image>
 						</view>
 					</view>
 				</view>
@@ -44,7 +47,6 @@
 		filters: {
 			changeHttp(value) {
 				value = 'http' + value.slice(5)
-				console.log(value)
 				return value
 			}
 		},
@@ -89,6 +91,11 @@
 						url: '/pages/cate/cate'
 					})
 				}
+			},
+			gotoSearch(){
+				uni.navigateTo({
+					url:'/subpkg/search/search'
+				})
 			}
 		}
 	}
@@ -144,6 +151,11 @@
 		.floor-img-box{
 			display: flex;
 				
+		}
+		.search-box{
+			position: sticky;
+			top: 0;
+			z-index: 999;
 		}
 	}
 </style>

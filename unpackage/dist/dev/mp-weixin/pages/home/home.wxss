@@ -46,4 +46,10 @@
 .home_page .floor-img-box {
   display: flex;
 }
+.home_page .search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
