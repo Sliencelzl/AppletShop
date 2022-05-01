@@ -20,6 +20,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "subpkg/good_detail/good_detail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

@@ -91,7 +91,7 @@
 				this.historyList = []
 				uni.setStorageSync('kw',[])
 			},
-			gotoGoodsList(item){
+			gotoGoodsList(kw){
 				uni.navigateTo({
 					url:'/subpkg/good_detail/good_detail?query=' + kw
 				})
