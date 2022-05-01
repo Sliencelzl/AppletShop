@@ -27,6 +27,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "subpkg/good_xiangqing/good_xiangqing",
+                    "query": "goods_id=57445",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
