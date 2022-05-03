@@ -43,7 +43,6 @@
 				}
 				this.goodsList = [...this.goodsList,...res.message.goods]
 				this.total = res.message.total
-				console.log(this.goodsList)
 			},
 			onReachBottom(){
 				if(this.queryObj.pagenum*this.queryObj.pagesize >= this.total) return uni.$toastMsg()

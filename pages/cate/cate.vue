@@ -45,7 +45,6 @@
 		},
 		onLoad() {
 			const sysInfo = uni.getSystemInfoSync() //获取屏幕高度的API
-			console.log(sysInfo)
 			this.wh = sysInfo.windowHeight - 50
 
 			this.getCatelist()
@@ -60,8 +59,6 @@
 				}
 				this.cateList = res.message
 				this.cateLevel2 = res.message[0].children
-				console.log('二级分类', this.cateLevel2)
-				console.log(this.cateList)
 			},
 			activeChange(i) {
 				this.active = i

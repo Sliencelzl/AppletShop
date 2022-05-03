@@ -35,7 +35,9 @@
 </template>
 
 <script>
+	import badge from '../../mixins/tabber-badge.js'
 	export default {
+		mixins:[badge],
 		data() {
 			return {
 				SwiperLise: [],
@@ -73,7 +75,6 @@
 					uni.$toastMsg('数据加载失败。。。')
 				}
 				this.NavList = res.message
-				console.log(this.NavList)
 			},
 			async getFlooer() {
 				const {
@@ -83,7 +84,6 @@
 					uni.$toastMsg('数据加载失败。。。')
 				}
 				this.FlooerList = res.message
-				console.log('楼层数据=>', this.FlooerList)
 			},
 			listTypehander(item) {
 				if (item.name === '分类') {
