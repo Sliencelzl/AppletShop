@@ -5,7 +5,7 @@
 		</view>
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<swiper-item class="swiper_item" v-for="(item,i) in SwiperLise" :key="i">
-				<navigator class="img" :url="'/subpkg/good_detail/good_detail?goods_id='+item.goods_id">
+				<navigator class="img" :url="'/subpkg/good_xiangqing/good_xiangqing?goods_id='+item.goods_id">
 					<image class="img" :src="item.image_src | changeHttp"></image>
 				</navigator>
 			</swiper-item>
@@ -20,12 +20,15 @@
 				<image :src="item.floor_title.image_src | changeHttp" class="floor-title"></image>
 				<view class="floor-img-box">
 					<view class="left-img-box">
+						<navigator class="img" :url="'/subpkg/good_detail/good_detail?goods_id='+item2.goods_id">
 						<image :src="item.product_list[0].image_src | changeHttp"
-							:style="{width:item.product_list[0].image_width + 'rpx' }" mode="widthFix"></image>
+							:style="{width:item.product_list[0].image_width + 'rpx' }" mode="widthFix"></image></navigator>
 					</view>
 					<view class="rigth-img-box">
 						<view class="right-img-item" v-for="(item2,i2) in item.product_list" :key="i2" v-if="i2 !== 0">
-							<image :src="item2.image_src | changeHttp" :style="{width:item2.image_width + 'rpx'}" mode="widthFix" class="floorImgitems"></image>
+							<navigator class="img" :url="'/subpkg/good_detail/good_detail?goods_id='+item2.goods_id">
+								<image :src="item2.image_src | changeHttp" :style="{width:item2.image_width + 'rpx'}" mode="widthFix" class="floorImgitems"></image>
+							</navigator>
 						</view>
 					</view>
 				</view>
